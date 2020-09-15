@@ -1,0 +1,16 @@
+network:
+  version: 2
+  renderer: NetworkManager
+  wifis:
+    wlxd03745606896:
+      optional: true
+      addresses: 
+        - {serverip}/24
+      nameservers:
+        addresses:
+          - 8.8.8.8
+          - 8.8.4.4
+      gateway4: {gateway}
+      access-points:
+        "{essid}":
+          password: "{passphrase}"

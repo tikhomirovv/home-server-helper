@@ -1,0 +1,14 @@
+network:
+  version: 2
+  renderer: NetworkManager
+  ethernets:
+    {ethinterface}:
+      optional: true
+      dhcp4: false
+      addresses:
+        - {serverip}/24
+      nameservers:
+        addresses:
+          - 8.8.8.8
+          - 8.8.4.4
+      gateway4: {gateway}
