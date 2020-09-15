@@ -6,5 +6,5 @@
 ### Запуск
 
 ```
-sudo ./wireless.sh
+sudo ./network.sh
 ```
