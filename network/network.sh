@@ -7,8 +7,7 @@
 while true; do
     read -p "Do you wish to install this tools? [y/n]: " yn
     case $yn in
-        [Yy]* ) make install;
-				yes Y | apt-get install network-manager
+        [Yy]* ) yes Y | apt-get install network-manager
 				yes Y | apt-get install net-tools
 				yes Y | apt-get install wireless-tools
 				yes Y | apt-get install wpasupplicant
@@ -22,8 +21,7 @@ done
 while true; do
     read -p "Do you wish to get & install RTL8188EU drivers? [y/n]: " yn
     case $yn in
-        [Yy]* ) make install;
-				echo "Compiling & Building drivers ..."
+        [Yy]* ) echo "Compiling & Building drivers ..."
 				mkdir -p /tmp/wireless-drivers && cd /tmp/wireless-drivers
 				git clone https://github.com/lwfinger/rtl8188eu.git
 				cd rtl8188eu && make all && make install
@@ -95,5 +93,16 @@ fi
 
 netplan generate
 netplan apply
+
+
+while true; do
+    read -p "Do you wish to disable systemd-networkd-wait-online.service? [y/n]: " yn
+    case $yn in
+        [Yy]* ) systemctl disable systemd-networkd-wait-online.service
+				break;;
+        [Nn]* ) break;;
+        * ) echo "Please answer yes (Y/y) or no (N/n).";;
+    esac
+done
 
 echo 'Done!'
