@@ -1,2 +1,1 @@
-# server-scripts
-Чтобы не настраивать домашний сервер много раз
+# Home server help scripts
