@@ -1,2 +1,3 @@
 # server-scripts
-Чтобы не настраивать домашний сервер много раз
+
+Collection of home server helper scripts (Unbuntu 20.04.1 LTS)

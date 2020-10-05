@@ -1,0 +1,8 @@
+[Unit]
+Description={description}
+After=multi-user.target
+[Service]
+Type=idle
+ExecStart={runscript}
+[Install]
+WantedBy=multi-user.target
